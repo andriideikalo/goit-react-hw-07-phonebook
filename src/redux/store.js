@@ -10,13 +10,6 @@ import {
   PURGE,
   REGISTER,
 } from 'redux-persist';
-// const store = configureStore({
-//    reducer: persistedReducer,
-//   middleware: (getDefaultMiddleware) =>
-//     getDefaultNiddlewarel 1
-//       serializableCheck: {
-//         ignoredActions: [FLUSH, REHYDRATE, PAUSE,
-//                                                   PERSIST, PURGE, REGISTER]
 
 export const store = configureStore({
   reducer: {
