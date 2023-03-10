@@ -20,6 +20,7 @@ const contactsState = {
     { id: 'id-13', name: 'Kline Tanya', number: '227-91-35' },
     { id: 'id-14', name: 'Simpson Tanya', number: '227-91-36' },
     { id: 'id-15', name: 'Rosie Tanya', number: '227-91-37' },
+    { id: 'id-15', name: 'Wlada Tanya', number: '227-91-38' },
   ],
 };
 
