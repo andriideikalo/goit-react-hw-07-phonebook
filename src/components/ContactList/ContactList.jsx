@@ -1,6 +1,6 @@
 import React from 'react';
 import { useDispatch, useSelector } from 'react-redux';
-import { contactSelector, filterSelector } from 'redux/selectors';
+import { selectLoadingState, selectVisibleList } from '../../redux/selectors';
 import { deleteContact } from '../../redux/operations';
 import {
   ContactItemStyled,
@@ -10,15 +10,12 @@ import {
 
 const ContactList = () => {
   const dispatch = useDispatch();
-  const contactList = useSelector(contactSelector);
-  const filterQuery = useSelector(filterSelector);
-  const visibleList = contactList.filter(item =>
-    item.name.toLowerCase().includes(filterQuery)
-  );
+  const isLoading = useSelector(selectLoadingState);
+  const visibleList = useSelector(selectVisibleList);
 
   return (
     <ol>
-      {visibleList.length !== 0 ? (
+      {visibleList.length === 0 && !isLoading ? (
         visibleList.map(({ id, name, number }) => (
           <ContactItemStyled key={id}>
             <ContactNameItemStyled>{name} </ContactNameItemStyled>
