@@ -44,7 +44,7 @@ export const contactsSlice = createSlice({
     [deleteContact.fulfilled](state, action) {
       normalizeState(state);
       const index = state.contacts.items.findIndex(
-        task => task.id === action.payload.id
+        contact => contact.id === action.payload.id
       );
       state.contacts.items.splice(index, 1);
     },
