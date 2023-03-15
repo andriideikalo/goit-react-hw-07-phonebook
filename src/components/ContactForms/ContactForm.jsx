@@ -1,8 +1,6 @@
-// import { FormStyled } from './ContactFormStyled';
-// import { InputStyled } from './ContactFormStyled';
 import { LabelStyled } from './ContactFormStyled';
 import { BottonStyled } from './ContactFormStyled';
-import { addContact } from '../../redux/contactsSplice';
+import { addContact } from '../../redux/operations';
 import { useDispatch, useSelector } from 'react-redux';
 import { contactSelector } from '../../redux/selectors';
 import { Formik, Form, Field } from 'formik';
