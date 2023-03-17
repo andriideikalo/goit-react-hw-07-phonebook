@@ -7,7 +7,7 @@ import { Formik, Form, Field } from 'formik';
 
 const initialValues = {
   name: '',
-  number: '',
+  phone: '',
 };
 // console.log(initialValues);
 const ContactForm = () => {
@@ -19,7 +19,7 @@ const ContactForm = () => {
       name="contact"
       initialValues={initialValues}
       onSubmit={(values, actions) => {
-        const { name, number } = values;
+        const { name, phone } = values;
 
         const isNameInContacts = contacts.find(
           item => item.name.toLowerCase() === name.toLowerCase()
@@ -29,7 +29,7 @@ const ContactForm = () => {
           actions.resetForm();
           return;
         }
-        dispatch(addContact({ name, number }));
+        dispatch(addContact({ name, phone }));
         actions.resetForm();
       }}
     >
@@ -45,11 +45,11 @@ const ContactForm = () => {
             style={{ margin: 10 + 'px' }}
           ></Field>
         </LabelStyled>
-        <LabelStyled htmlFor="number">
+        <LabelStyled htmlFor="phone">
           Number
           <Field
             type="tel"
-            name="number"
+            name="phone"
             pattern="\+?\d{1,4}?[-.\s]?\(?\d{1,3}?\)?[-.\s]?\d{1,4}[-.\s]?\d{1,4}[-.\s]?\d{1,9}"
             title="Phone number must be digits and can contain spaces, dashes, parentheses and can start with +"
             required
