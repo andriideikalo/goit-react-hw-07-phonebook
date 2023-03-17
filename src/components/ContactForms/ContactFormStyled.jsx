@@ -7,6 +7,7 @@ export const FormStyled = styled.form`
 `;
 export const LabelStyled = styled.label`
   display: block;
+  margin-left: 8px;
 `;
 
 export const BottonStyled = styled.button`

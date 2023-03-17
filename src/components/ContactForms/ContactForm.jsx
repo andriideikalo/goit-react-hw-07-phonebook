@@ -35,7 +35,7 @@ const ContactForm = () => {
     >
       <Form>
         <LabelStyled htmlFor="name">
-          Name
+          Name contact&nbsp;
           <Field
             type="text"
             name="name"
@@ -46,7 +46,7 @@ const ContactForm = () => {
           ></Field>
         </LabelStyled>
         <LabelStyled htmlFor="phone">
-          Number
+          Phone number
           <Field
             type="tel"
             name="phone"
@@ -59,7 +59,6 @@ const ContactForm = () => {
         <BottonStyled type="submit">Add contact</BottonStyled>
       </Form>
     </Formik>
-    // </FormStyled>
   );
 };
 // console.log(initialValues);

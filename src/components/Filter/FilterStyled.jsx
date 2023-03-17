@@ -14,7 +14,7 @@ export const InputFilterStyled = styled.input`
 
 export const FilterLabelStyled = styled.label`
   display: block;
-  margin-bottom: 10px;
+  margin: 0 0 10px 8px;
 `;
 
 export default InputFilterStyled;
